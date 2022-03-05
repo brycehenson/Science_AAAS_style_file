@@ -4,4 +4,6 @@ The bib style file that is provided by the journal science is not compliant with
 # TODO
 - [x] Titles in articles
 - [x] remove masters/ phd qualifier in thesis
-- [ ] add quotes for thesis title
+- [x] add quotes for thesis title
+- [ ] add mwe
+- [ ] add automated tests
