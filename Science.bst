@@ -11,7 +11,10 @@
 %% *** Applicable to Science Journal references ***
 %% 
 %% Copyright 1994-1999 Patrick W Daly
-%% Edited by Bryce Henson 2022 to correct disagreements between this style file and 
+%% 
+%% Edited by Bryce Henson 2022 
+%% (Department of Quantum Science & Technology, Research School of Physics, Australian National University)
+%% Changes made to correct disagreements between this bib style file and 
 %% [Instructions for preparing an initial manuscript](https://www.science.org/content/page/instructions-preparing-initial-manuscript#science-citation-style).
 %% corrections 2022-03-05
 %%  - articles should inculde the title
