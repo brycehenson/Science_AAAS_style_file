@@ -11,6 +11,12 @@
 %% *** Applicable to Science Journal references ***
 %% 
 %% Copyright 1994-1999 Patrick W Daly
+%% Edited by Bryce Henson 2022 to correct disagreements between this style file and 
+%% [Instructions for preparing an initial manuscript](https://www.science.org/content/page/instructions-preparing-initial-manuscript#science-citation-style).
+%% corrections 2022-03-05
+%%  - articles should inculde the title
+%%  - thesis should not specify masters/phd
+%%  - thesis title should be in quotes
  % ===============================================================
  % IMPORTANT NOTICE:
  % This bibliographic style (bst) file has been generated from one or
