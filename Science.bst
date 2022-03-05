@@ -509,7 +509,7 @@ FUNCTION {format.names}
         {
           nameptr #1
           #1 + =
-          numnames #5
+          numnames #50 %BMH 2022-03-05 change max authors to 50
           > and
             { "others" 't :=
               #1 'namesleft := }
