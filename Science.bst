@@ -271,11 +271,11 @@ FUNCTION {bbl.chapter}
 FUNCTION {bbl.techrep}
 { "Tech. Rep." }
 
-FUNCTION {bbl.mthesis}
-{ "Master's thesis" }
+FUNCTION {bbl.mthesis} %BMH 2022-03-05  from science AAAS "we do not use “dissertation,” “Ph.D.,” “Master’s,” or other specifics.""
+{ "thesis" }
 
-FUNCTION {bbl.phdthesis}
-{ "Ph.D. thesis" }
+FUNCTION {bbl.phdthesis}  %BMH 2022-03-05  from science AAAS "we do not use “dissertation,” “Ph.D.,” “Master’s,” or other specifics.""
+{ "thesis" }
 
 FUNCTION {bbl.first}
 { "First" }
@@ -590,6 +590,16 @@ FUNCTION {format.title}
   if$
 }
 
+%BMH 2022-03-05 trying to get quotes around the title
+% tried this quote function https://tex.stackexchange.com/questions/250045/how-to-enclose-titles-with-quotation-marks-through-changing-the-bst-file/304947
+% but couldn't get it to work so took the main bits
+FUNCTION {format.thesistitle}
+{ title empty$
+    { "" }
+    {"``" title "t" change.case$ * "''" * }
+  if$
+}
+
 FUNCTION {output.bibitem}
 { newline$
   "\bibitem{" write$
@@ -838,6 +848,8 @@ FUNCTION {format.chapter.pages}
   if$
 }
 
+
+
 FUNCTION {format.in.ed.booktitle}
 { booktitle empty$
     { "" }
@@ -1036,6 +1048,7 @@ FUNCTION {format.organization.address}
 FUNCTION {article}
 { output.bibitem
   format.authors "author" output.check
+  format.title "title" output.check   % BMH change 2022-03-05
   crossref missing$
     { journal
       emphasize
@@ -1208,7 +1221,7 @@ FUNCTION {manual}
 FUNCTION {mastersthesis}
 { output.bibitem
   format.authors "author" output.check
-  format.title "title" output.check
+  format.thesistitle "title" output.check
   bbl.mthesis format.thesis.type output.nonnull
   school "school" output.check
   address output
@@ -1233,7 +1246,7 @@ FUNCTION {misc}
 FUNCTION {phdthesis}
 { output.bibitem
   format.authors "author" output.check
-  format.title "title" output.check
+  format.thesistitle "title"  output.check  % BMH: todo add quotes here
   bbl.phdthesis format.thesis.type output.nonnull
   school "school" output.check
   address output
