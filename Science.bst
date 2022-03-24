@@ -20,6 +20,8 @@
 %%  - articles should inculde the title
 %%  - thesis should not specify masters/phd
 %%  - thesis title should be in quotes
+%%  - all authors should be included, no et al.
+%
  % ===============================================================
  % IMPORTANT NOTICE:
  % This bibliographic style (bst) file has been generated from one or
